@@ -1,27 +1,33 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard"; // this is now the inner content
 import Home from "./pages/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import Navbar from "./components/Navbar";
+import DashboardLayout from "./components/DashboardLayout";
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+
+        {/* 🔐 Protected Nested Dashboard */}
         <Route
           path="/dashboard"
           element={
             <PrivateRoute>
-              <Dashboard />
+              <DashboardLayout />
             </PrivateRoute>
           }
-        />
+        >
+          <Route index element={<Dashboard />} /> {/* /dashboard */}
+          {/* Future routes: <Route path="tasks" element={<TaskList />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   );

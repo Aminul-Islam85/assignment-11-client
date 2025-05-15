@@ -27,7 +27,9 @@ const Login = () => {
       }
 
       localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
       navigate("/dashboard");
+
     } catch {
       setError("Something went wrong. Try again later.");
     }
