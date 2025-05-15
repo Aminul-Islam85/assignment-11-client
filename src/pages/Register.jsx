@@ -34,7 +34,9 @@ const Register = () => {
       }
 
       localStorage.setItem("token", data.token);
-      navigate("/dashboard"); // redirect to dashboard
+      localStorage.setItem("user", JSON.stringify(data.user));
+      navigate("/dashboard");
+
     } catch {
       setError("Something went wrong. Try again later.");
     }

@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import Navbar from "./components/Navbar";
 import DashboardLayout from "./components/DashboardLayout";
+import AddTask from "./pages/AddTask";
+import MyTasks from "./pages/MyTasks";
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
           }
         >
           <Route index element={<Dashboard />} /> {/* /dashboard */}
+          <Route path="add-task" element={<AddTask />} />
+          <Route path="my-tasks" element={<MyTasks />} />
           {/* Future routes: <Route path="tasks" element={<TaskList />} /> */}
         </Route>
       </Routes>
