@@ -10,6 +10,9 @@ import AddTask from "./pages/AddTask";
 import MyTasks from "./pages/MyTasks";
 import AvailableTasks from "./pages/AvailableTasks";
 import MySubmissions from "./pages/MySubmissions";
+import Withdraw from "./pages/Withdraw";
+import PurchaseCoins from "./pages/PurchaseCoins";
+
 
 
 const App = () => {
@@ -36,6 +39,9 @@ const App = () => {
           <Route path="available-tasks" element={<AvailableTasks />} />
           <Route path="my-submissions" element={<MySubmissions />} />
           <Route path="*" element={<p>404 Not Found</p>} />
+          <Route path="withdraw" element={<Withdraw />} />
+          <Route path="purchase-coins" element={<PurchaseCoins />} />
+
 
 
         </Route>
