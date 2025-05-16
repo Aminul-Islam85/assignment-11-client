@@ -15,8 +15,8 @@ const DashboardLayout = () => {
           {/* Worker Links */}
           {user?.role === "worker" && (
             <>
-              <li><Link to="/dashboard/tasks">Available Tasks</Link></li>
-              <li><Link to="/dashboard/submissions">My Submissions</Link></li>
+              <li><Link to="/dashboard/available-tasks">Available Tasks</Link></li>
+              <li><Link to="/dashboard/my-submissions">My Submissions</Link></li>
               <li><Link to="/dashboard/withdraw">Withdraw</Link></li>
             </>
           )}

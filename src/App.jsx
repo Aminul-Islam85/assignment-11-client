@@ -8,6 +8,9 @@ import Navbar from "./components/Navbar";
 import DashboardLayout from "./components/DashboardLayout";
 import AddTask from "./pages/AddTask";
 import MyTasks from "./pages/MyTasks";
+import AvailableTasks from "./pages/AvailableTasks";
+import MySubmissions from "./pages/MySubmissions";
+
 
 const App = () => {
   return (
@@ -30,7 +33,11 @@ const App = () => {
           <Route index element={<Dashboard />} /> {/* /dashboard */}
           <Route path="add-task" element={<AddTask />} />
           <Route path="my-tasks" element={<MyTasks />} />
-          {/* Future routes: <Route path="tasks" element={<TaskList />} /> */}
+          <Route path="available-tasks" element={<AvailableTasks />} />
+          <Route path="my-submissions" element={<MySubmissions />} />
+          <Route path="*" element={<p>404 Not Found</p>} />
+
+
         </Route>
       </Routes>
     </BrowserRouter>
