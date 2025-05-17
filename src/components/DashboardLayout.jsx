@@ -31,14 +31,14 @@ const DashboardLayout = () => {
             </>
           )}
 
-          {/* Admin Links */}
           {user?.role === "admin" && (
-            <>
-              <li><Link to="/dashboard/manage-users">Manage Users</Link></li>
-              <li><Link to="/dashboard/manage-tasks">Manage Tasks</Link></li>
-              <li><Link to="/dashboard/withdraw-requests">Withdraw Requests</Link></li>
-            </>
-          )}
+  <>
+    <li><Link to="/dashboard/manage-users">Manage Users</Link></li>
+    <li><Link to="/dashboard/withdraw-requests">Withdraw Requests</Link></li>
+    <li><Link to="/dashboard/moderate-submissions">Moderate Submissions</Link></li>
+  </>
+)}
+
         </ul>
       </aside>
 

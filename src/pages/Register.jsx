@@ -59,6 +59,7 @@ const Register = () => {
             <option value="">Select Role</option>
             <option value="worker">Worker</option>
             <option value="buyer">Buyer</option>
+            <option value="admin">Admin</option>
           </select>
 
           <button type="submit" className="btn btn-primary w-full">Register</button>

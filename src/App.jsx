@@ -12,6 +12,11 @@ import AvailableTasks from "./pages/AvailableTasks";
 import MySubmissions from "./pages/MySubmissions";
 import Withdraw from "./pages/Withdraw";
 import PurchaseCoins from "./pages/PurchaseCoins";
+import ManageUsers from "./pages/admin/ManageUsers";
+import WithdrawRequests from "./pages/admin/WithdrawRequests";
+import ModerateSubmissions from "./pages/admin/ModerateSubmissions";
+
+
 
 
 
@@ -41,6 +46,10 @@ const App = () => {
           <Route path="*" element={<p>404 Not Found</p>} />
           <Route path="withdraw" element={<Withdraw />} />
           <Route path="purchase-coins" element={<PurchaseCoins />} />
+          <Route path="manage-users" element={<ManageUsers />} />
+          <Route path="withdraw-requests" element={<WithdrawRequests />} />
+          <Route path="moderate-submissions" element={<ModerateSubmissions />} />
+
 
 
 
